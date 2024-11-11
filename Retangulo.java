@@ -1,13 +1,14 @@
-public class Retangulo {
+public class Retangulo implements FiguraGeometrica {
+    private double largura;
+    private double altura;
 
-    double largura;
-    double altura;
-
-    double calcularArea() {
-        return largura * altura;
+    public Retangulo(double largura, double altura) {
+        this.largura = largura;
+        this.altura = altura;
     }
 
-    void exibirArea() {
-        System.out.println("A área do retângulo é " + calcularArea() + ".");
+    @Override
+    public double calcularArea() {
+        return largura * altura;
     }
 }

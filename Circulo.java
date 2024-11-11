@@ -1,14 +1,12 @@
-public class Circulo {
-    
-    double raio;
+public class Circulo implements FiguraGeometrica {
+    private double raio;
 
-    void calcularArea() {
-        double area = Math.PI * raio * raio;
-        System.out.println("A área do círculo é: " + area);
+    public Circulo(double raio) {
+        this.raio = raio;
     }
 
-    void calcularPerimetro() {
-        double perimetro = 2 * Math.PI * raio;
-        System.out.println("O perímetro do círculo é: " + perimetro);
+    @Override
+    public double calcularArea() {
+        return Math.PI * raio * raio;
     }
 }
